@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Anniversary Celebration</title>
+    <title>Our Holiday Trip to Banda Aceh</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: url('https://source.unsplash.com/1600x900/?celebration') no-repeat center center/cover;
+            background: url('https://source.unsplash.com/1600x900/?travel') no-repeat center center/cover;
             color: white;
             padding: 20px;
         }
@@ -37,18 +37,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Happy Anniversary, Fazlina Binti Irwan!</h1>
-        <p>Let's celebrate our special day on <strong>June 23, 2023</strong>.</p>
+        <h1>Our Holiday Trip to Banda Aceh!</h1>
+        <p>Let's get ready for our exciting trip on <strong>February 21, 2025</strong>.</p>
         <div class="countdown" id="countdown"></div>
-        <a class="rsvp-button" href="rsvp.html">RSVP Now</a>
     </div>
 
     <script>
         function countdownTimer() {
-            const anniversaryDate = new Date('2025-06-23T00:00:00').getTime();
+            const tripDate = new Date('2025-02-21T15:00:00').getTime();
             setInterval(() => {
                 const now = new Date().getTime();
-                const timeLeft = anniversaryDate - now;
+                const timeLeft = tripDate - now;
                 const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
