@@ -33,6 +33,75 @@
             border-radius: 5px;
             font-size: 1.2em;
         }
+        .trip-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Holiday Trip to Banda Aceh!</h1>
+        <p>Let's get ready for our exciting trip on <strong>June 23, 2025</strong>.</p>
+        <img src="1.jpg" alt="Banda Aceh Trip" class="trip-image">
+        <div class="countdown" id="countdown"></div>
+        <a class="rsvp-button" href="rsvp.html">Join the Trip</a>
+    </div>
+
+    <script>
+        function countdownTimer() {
+            const tripDate = new Date('2025-06-23T00:00:00').getTime();
+            setInterval(() => {
+                const now = new Date().getTime();
+                const timeLeft = tripDate - now;
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        }
+        countdownTimer();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Holiday Trip to Banda Aceh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?travel') no-repeat center center/cover;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .countdown {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .rsvp-button {
+            background: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body>
